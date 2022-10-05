@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="pretty.css">
+        <script src="validation.js"></script>
+        <title>Credit Card Form</title>
+    </head>
+    
+    <form>
+        <h1>Payment Details</h1>
+        <h3>Name on the Card</h3>
+        <input type="text" class="textfield" value="" id="name" name="name"/> 
+        <h3>Card Number</h3>
+        <input type="text" class="textfield" value='' id="cardNum" name="cardNum" onkeypress="return isNumber(event)" />
+        <h3>Valid Through</h3>
+        <input type="month" id="start" name="start" min="2022-10" value=''>
+        <h3>CVV</h3>
+        <input type="number" id="CVV" min="001" max="999" step="1" value=NaN /> 
+        <span id="error"></span>
+        <br>
+        <br>
+        <button type="button" onclick="errorMessage()">Pay now</button>
+    </form>
+</html>
